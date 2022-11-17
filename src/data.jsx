@@ -47,7 +47,7 @@ export const sliderItems = [
     },
     {
       id:2,
-      img:"https://i.ibb.co/xCmZjYK/etcjpg-removebg-preview.png",
+      img:"https://i.ibb.co/T49zSCY/laptop.png",
     },
     {
       id:3,
@@ -55,7 +55,7 @@ export const sliderItems = [
     },
     {
       id:4,
-      img:"https://www.burdastyle.com/pub/media/catalog/product/cache/7bd3727382ce0a860b68816435d76e26/107/BUS-PAT-BURTE-1320516/1170x1470_BS_2016_05_132_front.png",
+      img:"https://i.ibb.co/vVkKmND/iphone.png",
     },
     {
       id:5,

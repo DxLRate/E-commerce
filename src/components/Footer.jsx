@@ -126,7 +126,7 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{marginRight:"10px"}}/> 322 rh, wing-3, baker street 22, west Bind 
+          <Room style={{marginRight:"10px"}}/> 322 rh, wing-3, fishman island, west Blue 
         </ContactItem>
         <ContactItem>
           <Phone style={{marginRight:"10px"}}/> +18 234 56 789

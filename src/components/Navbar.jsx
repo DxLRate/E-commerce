@@ -3,44 +3,12 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
-
-const Container = styled.div`
-  height: 60px;
-  ${mobile({ height: "50px" })}
-`;
-
-const Wrapper = styled.div`
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  ${mobile({ padding: "10px 0px" })}
-`;
-
-const Left = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center;
-`;
-
-const Language = styled.span`
-  font-size: 14px;
-  cursor: pointer;
-  ${mobile({ display: "none" })}
-`;
-
-const SearchContainer = styled.div`
-  border: 0.5px solid lightgray;
-  display: flex;
-  align-items: center;
-  margin-left: 25px;
-  padding: 5px;
-`;
-
-const Input = styled.input`
-  border: none;
-  ${mobile({ width: "50px" })}
-`;
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Center = styled.div`
   flex: 1;
@@ -66,32 +34,54 @@ const MenuItem = styled.div`
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
-const Navbar = () => {
+const NavbarC = () => {
   return (
-    <Container>
-      <Wrapper>
-        <Left>
-          <Language>EN</Language>
-          <SearchContainer>
-            <Input placeholder="Search" />
-            <Search style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer>
-        </Left>
-        <Center>
-          <Logo>DxLR8</Logo>
+    <Navbar bg="light" expand="lg">
+      <Container fluid>
+        
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+        <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Search</Button>
+          </Form>
+          <Nav className="me-auto">
+            
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+            
+          </Nav>
+          <Center>
+           <Logo>DxLR8</Logo>
         </Center>
-        <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Sign In</MenuItem>
-          <MenuItem>
-            <Badge badgeContent={4} color="primary">
+          <Right>
+              <MenuItem>Register</MenuItem>
+              <MenuItem>Sign In</MenuItem>
+              <MenuItem>
+              <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />
-            </Badge>
-          </MenuItem>
-        </Right>
-      </Wrapper>
-    </Container>
+              </Badge>
+              </MenuItem>
+          </Right>
+        </Navbar.Collapse>
+        
+      </Container>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavbarC;
